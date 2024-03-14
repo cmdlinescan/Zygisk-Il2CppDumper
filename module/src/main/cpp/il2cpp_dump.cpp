@@ -351,7 +351,9 @@ void il2cpp_dump(const char *outDir) {
         imageOutput << "// omg procode so good \n";
     std::vector<std::string> outPuts;
     auto ass = il2cpp_domain_assembly_open(domain, "Assembly-CSharp");
+    LOGI("ass: %p", ass);
             auto image = il2cpp_assembly_get_image(ass);
+    LOGI("image: %p", image);
             std::stringstream imageStr;
             imageStr << "\n// Dll : " << il2cpp_image_get_name(image);
             auto classCount = il2cpp_image_get_class_count(image);
